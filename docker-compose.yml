@@ -1,0 +1,12 @@
+version: '0.1'
+services:
+  axiscam:
+    build: ./
+    image: 'axisapp:latest'
+    mem_limit: 500mb
+    restart: "unless-stopped"
+    logging: 
+      driver: "json-file"
+      options: 
+        max-size: "10m"
+        max-file: "3"
